@@ -4,10 +4,8 @@
 
 ### Estructura
 
-
 ### Listado de canciones
 
-- fetch a canciones y listarlas en cards
 - paginado (de ser necesario)
 - Filtros (a definir)
 - Filtros de ordenamiento (a definir)
@@ -42,15 +40,20 @@
 
 ## In Progress
 
+- fetch a canciones y listarlas en cards
+
 ## Done
 
 ### Estructura
+
 - Header
 - Footer
 
 ### Listado de canciones
+
 - crear cards
 
 ### Navegación
+
 - Agregar para elegir lenguaje
 - Crear NavBar para navegar entre páginas
