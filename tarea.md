@@ -15,7 +15,6 @@
 
 ### Detalles de las canciones
 
-- Diseñar página de detalle
 - Fetch a la canción elegida
 - Mostrar info completa de la canción
 - botón para agregar a favoritos
@@ -41,6 +40,7 @@
 ## In Progress
 
 - fetch a canciones y listarlas en cards
+- Diseñar página de detalle (mema)
 
 ## Done
 
