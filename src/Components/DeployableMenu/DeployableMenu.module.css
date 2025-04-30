@@ -1,0 +1,30 @@
+.deployableMenu {
+    position: fixed;
+    top: 3.5rem;
+    right: -250px;
+    width: 10rem;
+    height: auto;
+    background-color: var(--negro);
+    transition: right 0.3s ease;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.deployableMenu.open {
+    right: 0;
+}
+
+.deployableMenu a {
+    color: var(--color4);
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.deployableMenu a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}

@@ -5,6 +5,7 @@
     --color3: #D3FFE9;
     --color4: #8DDBE0;
     font-family: 'Nunito', sans-serif;
+    background-color: var(--color3);
 }
 
 body {

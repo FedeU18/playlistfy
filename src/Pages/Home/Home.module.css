@@ -1,3 +1,22 @@
-*{
- 
+.pageContainer {
+    padding: 0 2rem 2rem 2rem;
+}
+
+.pageTitle {
+    font-size: 3rem;
+    font-weight: bold;
+    padding: 1rem;
+    color: var(--color4);
+}
+
+.pageSubtitle {
+    font-size: 2rem; 
+    color: var(--color1);
+}
+
+.rowContainer {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem;
+    justify-content: space-evenly;
 }
