@@ -1,4 +1,12 @@
 {
     "welcome": "Welcome!",
-    "disclaimer": "This site uses the Spotify Web API but is not affiliated with or endorsed by Spotify AB. All Spotify content, including album artwork and metadata, is the property of Spotify AB. If you log in with your Spotify account, your data is accessed only with your explicit consent and in accordance with Spotify’s policies."
+    "disclaimer": "This site uses the Spotify Web API but is not affiliated with or endorsed by Spotify AB. All Spotify content, including album artwork and metadata, is the property of Spotify AB. If you log in with your Spotify account, your data is accessed only with your explicit consent and in accordance with Spotify’s policies.",
+    "home": "Home",
+    "favourites": "Favourites",
+    "playlists": "Playlists",
+    "language": "Language",
+    "top tracks": "Top tracks",
+    "popular artists": "Popular artists",
+    "most played albums": "Most played albums",
+    "search": "Search"
 }

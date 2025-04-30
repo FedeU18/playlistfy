@@ -1,0 +1,12 @@
+{
+    "welcome": "Bem-vindo!",
+    "disclaimer": "Este site utiliza a API Web do Spotify, mas não é afiliado nem aprovado pelo Spotify AB. Todo o conteúdo do Spotify, incluindo capas de álbuns e metadados, é propriedade do Spotify AB. Se você fizer login com sua conta do Spotify, seus dados serão acessados apenas com seu consentimento explícito e de acordo com as políticas do Spotify.",
+    "home": "Início",
+    "favourites": "Favoritos",
+    "playlists": "Playlists",
+    "language": "Idioma",
+    "top tracks": "Principais músicas",
+    "popular artists": "Artistas populares",
+    "most played albums": "Álbuns mais tocados",
+    "search": "Buscar"
+}

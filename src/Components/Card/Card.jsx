@@ -1,6 +1,10 @@
 import styles from './Card.module.css';
+import {useTranslation} from 'react-i18next';
 
 const Card = ({ type, data }) => {
+
+    const {t} = useTranslation();
+
     const renderContent = () => {
         switch (type) {
             case 'artist':

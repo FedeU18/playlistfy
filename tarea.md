@@ -7,7 +7,6 @@
 
 ### Listado de canciones
 
-- crear cards
 - fetch a canciones y listarlas en cards
 - paginado (de ser necesario)
 - Filtros (a definir)
@@ -34,9 +33,6 @@
 
 ### Navegación
 
-- Crear NavBar para navegar entre páginas
-- Agregar para elegir lenguaje
-
 ### Extras
 
 - Hacer la página Responsive
@@ -48,5 +44,13 @@
 
 ## Done
 
+### Estructura
 - Header
 - Footer
+
+### Listado de canciones
+- crear cards
+
+### Navegación
+- Agregar para elegir lenguaje
+- Crear NavBar para navegar entre páginas

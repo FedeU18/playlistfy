@@ -2,7 +2,7 @@
     position: fixed;
     top: 3.5rem;
     right: -250px;
-    width: 10rem;
+    width: auto;
     height: auto;
     background-color: var(--negro);
     transition: right 0.3s ease;

@@ -28,3 +28,8 @@
 .links a:hover {
     color: var(--color3);
 }
+
+.disclaimer{
+    width: 50%;
+    margin: 0 auto
+}

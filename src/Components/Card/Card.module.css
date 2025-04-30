@@ -4,6 +4,7 @@
     padding: 1rem;
     cursor: pointer;
     width: 10%;
+    min-width: 7rem;
     margin: 10px;
 }
 
