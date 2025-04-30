@@ -1,0 +1,19 @@
+:root {
+    --negro: #090909;
+    --color1: #4B5043;
+    --color2: #9BC4BC;
+    --color3: #D3FFE9;
+    --color4: #8DDBE0;
+    font-family: 'Nunito', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}

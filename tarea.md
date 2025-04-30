@@ -4,8 +4,6 @@
 
 ### Estructura
 
-- Header
-- Footer
 
 ### Listado de canciones
 
@@ -49,3 +47,6 @@
 ## In Progress
 
 ## Done
+
+- Header
+- Footer

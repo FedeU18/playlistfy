@@ -1,0 +1,30 @@
+.footer {
+    width: 100%;
+    background-color: var(--negro);
+    color: var(--color4);
+    padding: 1rem;
+    text-align: center;
+    min-height: 50px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
+
+.links a {
+    color: var(--color4);
+    text-decoration: none;
+}
+
+.links a:hover {
+    color: var(--color3);
+}

@@ -1,3 +1,4 @@
 {
-    "welcome": "Bienvenido"
+    "welcome": "Bienvenido",
+    "disclaimer": "Este sitio utiliza la API web de Spotify, pero no está afiliado ni respaldado por Spotify AB. Todo el contenido de Spotify, incluidas las ilustraciones de los álbumes y los metadatos, es propiedad de Spotify AB. Si inicia sesión con su cuenta de Spotify, sólo se accederá a sus datos con su consentimiento explícito y de conformidad con las políticas de Spotify."
 }

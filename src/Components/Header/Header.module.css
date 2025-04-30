@@ -1,6 +1,6 @@
-header {
-    background-color: black;
-    color: antiquewhite;
+.header {
+    background-color: var(--negro);
+    color: var(--color4);
     width: 100%;
     height: 56px;
     display: flex;
@@ -13,13 +13,26 @@ header {
     z-index: 1000;
 }
 
-input {
-    background-color: black;
-    color: antiquewhite;
-    border: 1px solid antiquewhite;
+.input {
+    background-color: var(--negro);
+    color: var(--color3);
+    border: 1px solid var(--color3);
     padding: 5px;
     border-radius: 4px;
     width: 30%;
-    margin-right: 20px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
 
+.logo {
+    font-size: 30px;
+    font-weight: bolder;
+    padding: 0;
+    color: var(--color4);
+}
+
+.i{
+    color: var(--color4);
+    font-size: 24px; 
 }
