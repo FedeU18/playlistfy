@@ -8,10 +8,10 @@ import Footer from "./Components/Footer/Footer";
 
 function App() {
   return (
-    <div className="w-full min-h-screen flex flex-col">
-      <div className="container mx-auto px-4 py-8 flex-grow flex flex-col">
+    <div className="min-h-screen flex flex-col" >
+      <div className="flex-1 flex flex-col">
         <Header />
-        <main className="flex-grow mt-16">
+        <main className="flex-1 pt-18">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/songDetail" element={<SongDetail />} />

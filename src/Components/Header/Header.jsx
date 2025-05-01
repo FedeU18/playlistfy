@@ -15,12 +15,11 @@ const Header = () => {
   };
 
   return (
-    <header className={styles.header}>
-      {/* <img src="src\assets\Logo.png" alt="Logo Playlistfy" /> */}
-      <div className={styles.logo}><a href="#">Playlistfy</a></div>
-      <input className={styles.input} type="text" placeholder={t('search')} />
+    <header className="fixed bg-[var(--negro)] text-[var(--color4)] w-full h-14 flex justify-between items-center px-4 z-[1000]">
+      <div className="text-4xl font-extrabold p-0 text-[var(--color4)]"><a href="#">Playlistfy</a></div>
+      <input className="bg-[var(--negro)] text-[var(--color3)] border border-[var(--color3)] p-[5px] rounded w-[30%] absolute left-1/2 -translate-x-1/2" type="text" placeholder={t('search')} />
       <div onClick={toggleMenu}>
-        <i className={`fa-solid fa-bars ${styles.menuIcon}`}></i>
+        <i className="text-[var(--color4)] text-[1.8rem] hover:text-[var(--color3)] hover:text-[2rem] fa-solid fa-bars"></i>
       </div>
       <DeployableMenu isOpen={isMenuOpen} />
     </header>

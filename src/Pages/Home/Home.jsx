@@ -9,12 +9,12 @@ const Home = () => {
 
   return (
     <>
-      <div className={styles.pageContainer}>
+      <div className="px-8 pb-8">
 
-        <h1 className={styles.pageTitle}>{t('welcome')}</h1>
+        <h1 className="text-5xl pt-5 pb-5 font-bold text-[var(--color4)]">{t('welcome')}</h1>
 
-        <h2 className={styles.pageSubtitle}>{t('top tracks')}</h2>
-        <div className={styles.rowContainer}>
+        <h2 className="text-4xl text-[var(--color1)]">{t('top tracks')}</h2>
+        <div className="flex flex-wrap p-4 justify-evenly">
           <Card
             type="artist"
             data={{
@@ -53,8 +53,8 @@ const Home = () => {
         </div>
 
 
-        <h2 className={styles.pageSubtitle}>{t('popular artists')}</h2>
-        <div className={styles.rowContainer}>
+        <h2 className="text-4xl text-[var(--color1)]">{t('popular artists')}</h2>
+        <div className="flex flex-wrap p-4 justify-evenly">
           <Card
             type="album"
             data={{
@@ -98,8 +98,8 @@ const Home = () => {
         </div>
 
 
-        <h2 className={styles.pageSubtitle}>{t('most played albums')}</h2>
-        <div className={styles.rowContainer}>
+        <h2 className="text-4xl text-[var(--color1)]" >{t('most played albums')}</h2>
+        <div className="flex flex-wrap p-4 justify-evenly">
           <Card
             type="song"
             data={{
