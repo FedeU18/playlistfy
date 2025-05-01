@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
-import styles from "./Home.module.css";
 import Card from "../../Components/Card/Card";
 import { useTranslation } from "react-i18next";
+import { fetchAlbums } from "../../services/fetchAlbums";
+import { fetchTracks } from "../../services/fetchTracks";
+import { fetchArtists } from "../../services/fetchArtists";
 
 const clientId = import.meta.env.VITE_CLIENT_ID;
 const clientSecret = import.meta.env.VITE_CLIENT_SECRET;
@@ -61,82 +63,22 @@ const Home = () => {
 
     fetchAccessToken();
   }, []);
-
   useEffect(() => {
-    const fetchArtists = async () => {
+    const loadAllData = async () => {
       if (!accessToken) return;
 
-      try {
-        const response = await fetch(
-          `https://api.spotify.com/v1/artists?ids=${artistIds.join(",")}`,
-          {
-            method: "GET",
-            headers: {
-              Authorization: `Bearer ${accessToken}`,
-            },
-          }
-        );
+      const [fetchedAlbums, fetchedArtists, fetchedTracks] = await Promise.all([
+        fetchAlbums(accessToken, albumIds),
+        fetchArtists(accessToken, artistIds),
+        fetchTracks(accessToken, trackIds),
+      ]);
 
-        const data = await response.json();
-        setArtists(data.artists);
-      } catch (error) {
-        console.error("Error fetching artists:", error);
-      }
+      if (fetchedAlbums) setAlbums(fetchedAlbums);
+      if (fetchedArtists) setArtists(fetchedArtists);
+      if (fetchedTracks) setTracks(fetchedTracks);
     };
 
-    fetchArtists();
-  }, [accessToken]);
-
-  useEffect(() => {
-    const fetchAlbums = async () => {
-      if (!accessToken) return;
-
-      try {
-        const response = await fetch(
-          `https://api.spotify.com/v1/albums?ids=${albumIds.join(",")}`,
-          {
-            method: "GET",
-            headers: {
-              Authorization: `Bearer ${accessToken}`,
-            },
-          }
-        );
-
-        const data = await response.json();
-        setAlbums(data.albums); // Aquí puedes actualizar el estado con los álbumes
-      } catch (error) {
-        console.error("Error fetching albums:", error);
-      }
-    };
-
-    fetchAlbums();
-  }, [accessToken]);
-
-  useEffect(() => {
-    const fetchTracks = async () => {
-      if (!accessToken) return;
-
-      try {
-        // IDs de las canciones
-        const response = await fetch(
-          `https://api.spotify.com/v1/tracks?ids=${trackIds.join(",")}`,
-          {
-            method: "GET",
-            headers: {
-              Authorization: `Bearer ${accessToken}`,
-            },
-          }
-        );
-
-        const data = await response.json();
-        setTracks(data.tracks);
-        console.log(data.tracks);
-      } catch (error) {
-        console.error("Error fetching tracks:", error);
-      }
-    };
-
-    fetchTracks();
+    loadAllData();
   }, [accessToken]);
 
   const { t } = useTranslation();
