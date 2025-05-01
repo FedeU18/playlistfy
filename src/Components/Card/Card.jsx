@@ -10,24 +10,24 @@ const Card = ({ type, data }) => {
             case 'artist':
                 return (
                     <>
-                        <img src={data.image} alt={data.name} className={styles.cardImage} />
-                        <h3 className={styles.cardTitle}>{data.name}</h3>
+                        <img src={data.image} alt={data.name} className="w-full h-auto rounded mb-2 text-[var(--color4)]" />
+                        <h3 className="text-[var(--color4)] text-lg font-bold mb-1">{data.name}</h3>
                     </>
                 );
             case 'album':
                 return (
                     <>
-                        <img src={data.image} alt={data.name} className={styles.cardImage} />
-                        <h3 className={styles.cardTitle}>{data.name}</h3>
-                        <h5 className={styles.cardSubtitle}>{data.artist}</h5>
+                        <img src={data.image} alt={data.name} className="w-full h-auto rounded mb-2 text-[var(--color4)]" />
+                        <h3 className="text-[var(--color4)] text-lg font-bold mb-1">{data.name}</h3>
+                        <h5 className="text-[var(--color3)] text-sm">{data.artist}</h5>
                     </>
                 );
             case 'song':
                 return (
                     <>
-                        <img src={data.image} alt={data.name} className={styles.cardImage} />
-                        <h3 className={styles.cardTitle}>{data.name}</h3>
-                        <h5 className={styles.cardSubtitle}>{data.artist}</h5>
+                        <img src={data.image} alt={data.name} className="w-full h-auto rounded mb-2 text-[var(--color4)]" />
+                        <h3 className="text-[var(--color4)] text-lg font-bold mb-1">{data.name}</h3>
+                        <h5 className="text-[var(--color3)] text-sm">{data.artist}</h5>
                     </>
                 );
             default:
@@ -36,7 +36,7 @@ const Card = ({ type, data }) => {
     };
 
     return (
-        <div className={styles.card}>
+        <div class="bg-[var(--negro)] rounded-lg p-4 cursor-pointer w-[10%] min-w-[7rem] m-2.5 hover:opacity-80">
             {renderContent()}
         </div>
     )

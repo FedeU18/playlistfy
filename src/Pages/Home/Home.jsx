@@ -147,11 +147,15 @@ const Home = () => {
 
   return (
     <>
-      <div className={styles.pageContainer}>
-        <h1 className={styles.pageTitle}>{t("welcome")}</h1>
+      <div className="px-8 pb-8">
+        <h1 className="text-5xl pt-5 pb-5 font-bold text-[var(--color4)]">
+          {t("welcome")}
+        </h1>
 
-        <h2 className={styles.pageSubtitle}>{t("popular artists")}</h2>
-        <div className={styles.rowContainer}>
+        <h2 className="text-4xl text-[var(--color1)]">
+          {t("popular artists")}
+        </h2>
+        <div className="flex flex-wrap p-4 justify-evenly">
           {artists.map((artist) => (
             <Card
               key={artist.id}
@@ -164,8 +168,10 @@ const Home = () => {
           ))}
         </div>
 
-        <h2 className={styles.pageSubtitle}>{t("most played albums")}</h2>
-        <div className={styles.rowContainer}>
+        <h2 className="text-4xl text-[var(--color1)]">
+          {t("most played albums")}
+        </h2>
+        <div className="flex flex-wrap p-4 justify-evenly">
           {albums.map((album) => (
             <Card
               key={album.id}
@@ -179,8 +185,8 @@ const Home = () => {
           ))}
         </div>
 
-        <h2 className={styles.pageSubtitle}>{t("top tracks")}</h2>
-        <div className={styles.rowContainer}>
+        <h2 className="text-4xl text-[var(--color1)]">{t("top tracks")}</h2>
+        <div className="flex flex-wrap p-4 justify-evenly">
           {tracks.map((track) => (
             <Card
               key={track.id}

@@ -10,10 +10,10 @@ const DeployableMenu = ({ isOpen }) => {
     return (
         <>
             <div className={`${styles.deployableMenu} ${isOpen ? styles.open : ''}`}>
-                <a href="#">{t('home')}</a>
-                <a href="#">{t('favourites')}</a>
-                <a href="#">{t('playlists')}</a>
-                <a href="#" onClick={(e) => {
+                <a href="#" className="text-[var(--color4)] no-underline text-lg p-2 rounded transition-colors duration-200 ease-in-out hover:bg-white/10">{t('home')}</a>
+                <a href="#" className="text-[var(--color4)] no-underline text-lg p-2 rounded transition-colors duration-200 ease-in-out hover:bg-white/10">{t('favourites')}</a>
+                <a href="#" className="text-[var(--color4)] no-underline text-lg p-2 rounded transition-colors duration-200 ease-in-out hover:bg-white/10">{t('playlists')}</a>
+                <a href="#" className="text-[var(--color4)] no-underline text-lg p-2 rounded transition-colors duration-200 ease-in-out hover:bg-white/10" onClick={(e) => {
                     e.preventDefault();
                     setIsLanguageModalOpen(true);
                 }}>{t('language')}</a>
