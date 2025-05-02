@@ -15,9 +15,7 @@
 
 ### Detalles de las canciones
 
-- Fetch a la canción elegida
 - botón para agregar a favoritos
-- botón para volver al listado
 - Mostrar un 404 en caso de que se ingrese una canción inexistente desde la URL
 
 ### Listado de canciones favoritas
@@ -44,16 +42,10 @@
 
 ## Done
 
-### Estructura
-
 - Header
 - Footer
-
-### Listado de canciones
-
 - crear cards
-
-### Navegación
-
 - Agregar para elegir lenguaje
 - Crear NavBar para navegar entre páginas
+- Fetch a la canción elegida
+- botón para volver al listado
