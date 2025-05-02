@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router";
 
 const Card = ({ type, data }) => {
   const { t } = useTranslation();
@@ -20,7 +21,7 @@ const Card = ({ type, data }) => {
         );
       case "album":
         return (
-          <>
+          <Link to={`/albumDetail/${data.id}`}>
             <img
               src={data.image}
               alt={data.name}
@@ -30,7 +31,7 @@ const Card = ({ type, data }) => {
               {data.name}
             </h3>
             <h5 className="text-[var(--color3)] text-sm">{data.artist}</h5>
-          </>
+          </Link>
         );
       case "song":
         return (

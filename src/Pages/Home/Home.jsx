@@ -4,9 +4,7 @@ import { useTranslation } from "react-i18next";
 import { fetchAlbums } from "../../services/fetchAlbums";
 import { fetchTracks } from "../../services/fetchTracks";
 import { fetchArtists } from "../../services/fetchArtists";
-
-const clientId = import.meta.env.VITE_CLIENT_ID;
-const clientSecret = import.meta.env.VITE_CLIENT_SECRET;
+import { Link } from "react-router";
 
 const artistIds = [
   "2n2RSaZqBuUUukhbLlpnE6",
@@ -32,37 +30,11 @@ const trackIds = [
   "1TDk2Jmi4dVZhm2dum3Jim",
 ];
 
-const Home = () => {
+const Home = ({ accessToken }) => {
   const [tracks, setTracks] = useState([]);
   const [albums, setAlbums] = useState([]);
   const [artists, setArtists] = useState([]);
-  const [accessToken, setAccessToken] = useState("");
 
-  // Obtener token de acceso
-  useEffect(() => {
-    const fetchAccessToken = async () => {
-      try {
-        const result = await fetch("https://accounts.spotify.com/api/token", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/x-www-form-urlencoded",
-          },
-          body: new URLSearchParams({
-            grant_type: "client_credentials",
-            client_id: clientId,
-            client_secret: clientSecret,
-          }),
-        });
-
-        const data = await result.json();
-        setAccessToken(data.access_token);
-      } catch (error) {
-        console.error("Error fetching token:", error);
-      }
-    };
-
-    fetchAccessToken();
-  }, []);
   useEffect(() => {
     const loadAllData = async () => {
       if (!accessToken) return;
@@ -84,7 +56,7 @@ const Home = () => {
   const { t } = useTranslation();
 
   if (artists.length === 0 && albums.length === 0 && tracks.length === 0) {
-    return <h1 className="text">Loading...</h1>;
+    return <h1 className="text">{t("loading")}</h1>;
   }
 
   return (
@@ -119,6 +91,7 @@ const Home = () => {
               key={album.id}
               type="album"
               data={{
+                id: album.id,
                 name: album.name,
                 artist: album.artists[0]?.name || "Unknown Artist",
                 image: album.images[0]?.url || "default-image-url",
