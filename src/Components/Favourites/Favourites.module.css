@@ -1,0 +1,13 @@
+.favouriteIcon {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
+    color: #ffd700;
+    transition: transform 0.2s ease;
+    z-index: 10;
+  }
+  
+  .favouriteIcon:hover {
+    transform: scale(1.2);
+  }

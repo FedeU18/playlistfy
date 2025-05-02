@@ -14,5 +14,7 @@
   "detail of": "Detail of",
   "artist": "Artist",
   "tracks": "Tracks",
-  "duration": "Duration"
+  "duration": "Duration",
+  "albums": "Albums",
+  "artists": "Artists"
 }

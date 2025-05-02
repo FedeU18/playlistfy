@@ -7,6 +7,8 @@ import Header from "./Components/Header/Header";
 import Footer from "./Components/Footer/Footer";
 import { useEffect, useState } from "react";
 import ArtistDetail from "./Pages/ArtistDetail/ArtistDetail";
+import { FavouritesProvider } from './context/FavouritesContext';
+import FavouritesList from './Pages/FavouritesList/FavouritesList';
 
 const clientId = import.meta.env.VITE_CLIENT_ID;
 const clientSecret = import.meta.env.VITE_CLIENT_SECRET;
@@ -43,26 +45,28 @@ function App() {
   if (!accessToken) return <h1>Cargando token...</h1>;
 
   return (
-    <div className="min-h-screen flex flex-col">
-      <div className="flex-1 flex flex-col">
-        <Header />
-        <main className="flex-1 pt-18">
-          <Routes>
-            <Route path="/" element={<Home accessToken={accessToken} />} />
-            <Route
-              path="/albumDetail/:id"
-              element={<AlbumDetail accessToken={accessToken} />}
-            />
-            <Route
-              path="/artistDetail/:id"
-              element={<ArtistDetail accessToken={accessToken} />}
-            />
-            <Route path="/favoriteSongs" element={<FavoriteSongs />} />
-          </Routes>
-        </main>
-        <Footer />
+    <FavouritesProvider>
+      <div className="min-h-screen flex flex-col">
+        <div className="flex-1 flex flex-col">
+          <Header />
+          <main className="flex-1 pt-18">
+            <Routes>
+              <Route path="/" element={<Home accessToken={accessToken} />} />
+              <Route
+                path="/albumDetail/:id"
+                element={<AlbumDetail accessToken={accessToken} />}
+              />
+              <Route
+                path="/artistDetail/:id"
+                element={<ArtistDetail accessToken={accessToken} />}
+              />
+              <Route path="/favouritesList" element={<FavouritesList />} />
+            </Routes>
+          </main>
+          <Footer />
+        </div>
       </div>
-    </div>
+    </FavouritesProvider>
   );
 }
 
