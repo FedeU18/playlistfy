@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { useParams } from "react-router";
+import { useNavigate, useParams } from "react-router";
 
 const AlbumDetail = ({ accessToken }) => {
   const { id } = useParams();
   const [album, setAlbum] = useState(null);
-  // Obtener datos del álbum
+  const navigate = useNavigate();
 
   const { t } = useTranslation();
 
@@ -40,6 +40,12 @@ const AlbumDetail = ({ accessToken }) => {
   return (
     //idea: podría ser un contenedor negro con bordes redondos
     <div className="justify-self-center-safe w-6xl bg-[#030303e5] text-white p-10 rounded-[40px] mb-5">
+      <button
+        className="border py-2 px-3 rounded bg-[var(--color1)] text-[var(--color4)] hover:bg-[var(--color2)]"
+        onClick={() => navigate("/")}
+      >
+        Volver
+      </button>
       <h1 className="text-3xl font-bold mb-8">
         {t("detail of")} {album.name}
       </h1>

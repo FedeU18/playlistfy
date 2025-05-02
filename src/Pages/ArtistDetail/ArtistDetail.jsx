@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { useParams } from "react-router";
+import { useNavigate, useParams } from "react-router";
 
 const ArtistDetail = ({ accessToken }) => {
   const { id } = useParams();
   const [artist, setArtist] = useState(null);
-
+  const navigate = useNavigate();
   const { t } = useTranslation();
 
   useEffect(() => {
@@ -38,6 +38,12 @@ const ArtistDetail = ({ accessToken }) => {
   return (
     <>
       <h1>{artist.name}</h1>
+      <button
+        className="border py-2 px-3 rounded bg-[var(--color1)] text-[var(--color4)] hover:bg-[var(--color2)]"
+        onClick={() => navigate("/")}
+      >
+        Volver
+      </button>
     </>
   );
 };
