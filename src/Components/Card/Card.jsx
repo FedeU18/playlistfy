@@ -35,7 +35,7 @@ const Card = ({ type, data }) => {
         );
       case "song":
         return (
-          <>
+          <Link to={`/albumDetail/${data.albumId}`}>
             <img
               src={data.image}
               alt={data.name}
@@ -45,7 +45,7 @@ const Card = ({ type, data }) => {
               {data.name}
             </h3>
             <h5 className="text-[var(--color3)] text-sm">{data.artist}</h5>
-          </>
+          </Link>
         );
       default:
         return null;

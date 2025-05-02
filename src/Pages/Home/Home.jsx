@@ -107,6 +107,7 @@ const Home = ({ accessToken }) => {
               key={track.id}
               type="song"
               data={{
+                albumId: track.album.id,
                 name: track.name,
                 artist: track.artists[0]?.name || "Unknown Artist",
                 image: track.album.images[0].url || "default-image-url",
