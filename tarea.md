@@ -16,7 +16,6 @@
 ### Detalles de las canciones
 
 - Fetch a la canción elegida
-- Mostrar info completa de la canción
 - botón para agregar a favoritos
 - botón para volver al listado
 - Mostrar un 404 en caso de que se ingrese una canción inexistente desde la URL
@@ -41,6 +40,7 @@
 
 - fetch a canciones y listarlas en cards
 - Diseñar página de detalle (mema)
+- Mostrar info completa de la canción (mema)
 
 ## Done
 
