@@ -8,7 +8,7 @@ const Card = ({ type, data }) => {
     switch (type) {
       case "artist":
         return (
-          <>
+          <Link to={`/artistDetail/${data.id}`}>
             <img
               src={data.image}
               alt={data.name}
@@ -17,7 +17,7 @@ const Card = ({ type, data }) => {
             <h3 className="text-[var(--color4)] text-lg font-bold mb-1">
               {data.name}
             </h3>
-          </>
+          </Link>
         );
       case "album":
         return (

@@ -75,6 +75,7 @@ const Home = ({ accessToken }) => {
               key={artist.id}
               type="artist"
               data={{
+                id: artist.id,
                 name: artist.name,
                 image: artist.images[0]?.url || "default-image-url",
               }}

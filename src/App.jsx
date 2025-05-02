@@ -6,6 +6,7 @@ import FavoriteSongs from "./Pages/FavoriteSongs/FavoriteSongs";
 import Header from "./Components/Header/Header";
 import Footer from "./Components/Footer/Footer";
 import { useEffect, useState } from "react";
+import ArtistDetail from "./Pages/ArtistDetail/ArtistDetail";
 
 const clientId = import.meta.env.VITE_CLIENT_ID;
 const clientSecret = import.meta.env.VITE_CLIENT_SECRET;
@@ -51,6 +52,10 @@ function App() {
             <Route
               path="/albumDetail/:id"
               element={<AlbumDetail accessToken={accessToken} />}
+            />
+            <Route
+              path="/artistDetail/:id"
+              element={<ArtistDetail accessToken={accessToken} />}
             />
             <Route path="/favoriteSongs" element={<FavoriteSongs />} />
           </Routes>
