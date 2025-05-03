@@ -6,7 +6,6 @@
 
 ### Listado de canciones
 
-- paginado (de ser necesario)
 - Filtros (a definir)
 - Filtros de ordenamiento (a definir)
 - mensaje si no hay resultados
@@ -42,6 +41,7 @@
 
 ## Done
 
+- paginado (de ser necesario)
 - Header
 - Footer
 - crear cards
