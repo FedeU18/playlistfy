@@ -12,6 +12,7 @@ const artistIds = [
   "1Ffb6ejR6Fe5IamqA5oRUF",
   "7dGJo4pcD2V6oG8kP0tJRR",
   "37394IP6uhnjIpsawpMu4l",
+  "5YCc6xS5Gpj3EkaYGdjyNK",
 ];
 
 const albumIds = [
@@ -20,6 +21,7 @@ const albumIds = [
   "6IYPmM3xsOPL2XPSvf1ZAz",
   "0f7R0jf0pcTb6K6IVVPcMD",
   "4SD2UxRO9OgeSCQK0PN7cC",
+  "0fYhjxeRFdXp6s8R9hUXKt",
 ];
 
 const trackIds = [
@@ -28,6 +30,7 @@ const trackIds = [
   "6lFUdRItQEsEuD7dSINL47",
   "0gchQwxmBWj5no8NJ8b2yH",
   "1TDk2Jmi4dVZhm2dum3Jim",
+  "7J00DHotXFrXatl9X6xY9r",
 ];
 
 const Home = ({ accessToken }) => {

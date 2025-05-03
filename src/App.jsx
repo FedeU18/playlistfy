@@ -3,6 +3,7 @@ import "./App.css";
 import Home from "./Pages/Home/Home";
 import AlbumDetail from "./Pages/AlbumDetail/AlbumDetail";
 import FavoriteSongs from "./Pages/FavoriteSongs/FavoriteSongs";
+import SearchView from "./Pages/SearchView/SearchView";
 import Header from "./Components/Header/Header";
 import Footer from "./Components/Footer/Footer";
 import { useEffect, useState } from "react";
@@ -61,6 +62,7 @@ function App() {
                 element={<ArtistDetail accessToken={accessToken} />}
               />
               <Route path="/favouritesList" element={<FavouritesList />} />
+              <Route path="/searchView" element={<SearchView />} />
             </Routes>
           </main>
           <Footer />
