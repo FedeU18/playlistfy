@@ -12,7 +12,7 @@ const Search = () => {
     const navigate = useNavigate(); //hook para la navegación
 
     useEffect(() => {
-        // Obtener el token de acceso
+        //obtener el token de acceso
         var authParams = {
             method: 'POST',
             headers: {
@@ -27,17 +27,16 @@ const Search = () => {
 
     //search function
     async function search(event) {
-        event.preventDefault(); //prevenir el comportamiento predeterminado del formulario
-
+        event.preventDefault();
+    
         if (searchInput.trim() === "") {
             console.log("El campo de búsqueda está vacío.");
             return;
         }
-
-        setLoading(true); //activar el estado de carga
+    
+        setLoading(true);
         console.log("Buscando:" + searchInput);
-
-        // Get request usando search para obtener la ID del artista
+    
         var searchParams = {
             method: 'GET',
             headers: {
@@ -45,32 +44,34 @@ const Search = () => {
                 'Authorization': 'Bearer ' + accessToken
             }
         };
-
-        //buscar artista usando el input
-        var artistID = await fetch(`https://api.spotify.com/v1/search?q=${encodeURIComponent(searchInput)}&type=artist`, searchParams)
+    
+        // Buscar artista y canciones
+        var searchResults = await fetch(
+            `https://api.spotify.com/v1/search?q=${encodeURIComponent(searchInput)}&type=artist,track&limit=10`,
+            searchParams
+        ).then(response => response.json());
+        
+        //toma al artista principal/mas popular
+        const artistID = searchResults.artists?.items[0]?.id;
+        //primeras 4 canciones
+        const songs = searchResults.tracks?.items?.slice(0, 4) || [];
+    
+        let returnedAlbums = [];
+    
+        if (artistID) {
+            returnedAlbums = await fetch(
+                `https://api.spotify.com/v1/artists/${artistID}/albums?include_groups=album&market=ES&limit=50`,
+                searchParams
+            )
             .then(response => response.json())
-            .then(data => { return data.artists.items[0]?.id });
-
-        console.log("ID del artista: " + artistID);
-
-        //obtener los álbumes del artista (pq el del video no usa el returnedAlbums???)
-        var returnedAlbums = await fetch(`https://api.spotify.com/v1/artists/${artistID}/albums?include_groups=album&market=ES&limit=50`, searchParams)
-            .then(response => response.json())
-            .then(data => {
-                console.log(data);
-                setAlbums(data.items); //actualizar el estado de los álbumes
-            });
-
-        setLoading(false); //desactivar el estado de carga
-    }
-
-    //useEffect para redirigir a la vista de búsqueda después de que los álbumes se hayan actualizado
-    useEffect(() => {
-        if (albums.length > 0) {
-            navigate("/searchView", { state: { albums } });
-            setAlbums([]); // limpiar después de navegar
+            .then(data => data.items);
         }
-    }, [albums, navigate]);
+    
+        setLoading(false);
+        const artists = searchResults.artists?.items?.length ? [searchResults.artists.items[0]] : [];
+
+        navigate("/searchView", { state: { artists, songs, albums: returnedAlbums } });
+    }
 
     return (
         <div className="search-container w-full flex justify-center items-center py-4">
