@@ -13,12 +13,13 @@
   "loading": "Loading...",
   "detail of": "Detail of",
   "artist": "Artist",
-  "tracks": "Tracks",
+  "songs": "Songs",
   "duration": "Duration",
   "albums": "Albums",
   "artists": "Artists",
   "empty artists": "No artists marked as favourite",
   "empty albums": "No albums marked as favourite",
   "empty songs": "No songs marked as favourite",
-  "search placeholder": "Search artist, album or song"
+  "search placeholder": "Search artist, album or song",
+  "loading": "loading"
 }

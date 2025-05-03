@@ -53,26 +53,26 @@ const FavouritesList = () => {
 
   return (
     <div className="p-6">
-      <h1 className="text-[var(--color4)] text-2xl font-bold mb-6">{t('Favorites')}</h1>
+      <h1 className="text-[var(--color4)] text-2xl font-bold mb-6">{t('favourites')}</h1>
       
       <div className="flex gap-4 mb-6">
         <button 
           className={`px-4 py-2 rounded-lg ${activeTab === 'artists' ? 'bg-[var(--color1)] text-[var(--color4)]' : 'bg-[var(--negro)] text-[var(--color4)]'}`}
           onClick={() => setActiveTab('artists')}
         >
-          {t('Favorite Artists')}
+          {t('artists')}
         </button>
         <button 
           className={`px-4 py-2 rounded-lg ${activeTab === 'albums' ? 'bg-[var(--color1)] text-[var(--color4)]' : 'bg-[var(--negro)] text-[var(--color4)]'}`}
           onClick={() => setActiveTab('albums')}
         >
-          {t('Favorite Albums')}
+          {t('albums')}
         </button>
         <button 
           className={`px-4 py-2 rounded-lg ${activeTab === 'songs' ? 'bg-[var(--color1)] text-[var(--color4)]' : 'bg-[var(--negro)] text-[var(--color4)]'}`}
           onClick={() => setActiveTab('songs')}
         >
-          {t('Favorite Songs')}
+          {t('songs')}
         </button>
       </div>
 

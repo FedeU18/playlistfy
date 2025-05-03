@@ -13,12 +13,13 @@
   "loading": "Chargement...",
   "detail of": "Détail de",
   "artist": "Artiste",
-  "tracks": "Morceaux",
+  "songs": "Morceaux",
   "duration": "Durée",
   "albums": "Albums",
   "artists": "Artistes",
   "empty artists": "Aucun artiste marqué comme favori",
   "empty albums": "Aucun album marqué comme favori",
   "empty songs": "Aucune chanson marquée comme favorite",
-  "search placeholder": "Künstler, Album oder Lied suchen"
+  "search placeholder": "Künstler, Album oder Lied suchen",
+  "loading": "Chargement"
 }

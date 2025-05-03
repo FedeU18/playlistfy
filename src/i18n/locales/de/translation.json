@@ -13,12 +13,13 @@
   "loading": "Laden...",
   "detail of": "Details von",
   "artist": "Künstler",
-  "tracks": "Titel",
+  "songs": "Titel",
   "duration": "Dauer",
   "albums": "Alben",
   "artists": "Künstler",
   "empty artists": "Keine Künstler als Favoriten markiert",
   "empty albums": "Keine Alben als Favoriten markiert",
   "empty songs": "Keine Lieder als Favoriten markiert",
-  "search placeholder": "Künstler, Album oder Lied suchen"
+  "search placeholder": "Künstler, Album oder Lied suchen",
+  "loading": "Laden"
 }
