@@ -15,7 +15,6 @@
 ### Detalles de las canciones
 
 - botón para agregar a favoritos
-- Mostrar un 404 en caso de que se ingrese una canción inexistente desde la URL
 
 ### Listado de canciones favoritas
 
@@ -41,6 +40,7 @@
 
 ## Done
 
+- Mostrar un 404 en caso de que se ingrese una canción inexistente desde la URL
 - paginado (de ser necesario)
 - Header
 - Footer
