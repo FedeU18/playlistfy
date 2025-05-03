@@ -13,7 +13,7 @@ const Card = ({ type, data }) => {
             <img
               src={data.image}
               alt={data.name}
-              className="w-full h-auto rounded mb-2 text-[var(--color4)]"
+              className="w-full h-auto rounded mb-2"
             />
             <h3 className="text-[var(--color4)] text-lg font-bold mb-1">
               {data.name}
@@ -26,7 +26,7 @@ const Card = ({ type, data }) => {
             <img
               src={data.image}
               alt={data.name}
-              className="w-full h-auto rounded mb-2 text-[var(--color4)]"
+              className="w-full h-auto rounded mb-2"
             />
             <h3 className="text-[var(--color4)] text-lg font-bold mb-1">
               {data.name}
@@ -40,7 +40,7 @@ const Card = ({ type, data }) => {
             <img
               src={data.image}
               alt={data.name}
-              className="w-full h-auto rounded mb-2 text-[var(--color4)]"
+              className="w-full h-auto rounded mb-2"
             />
             <h3 className="text-[var(--color4)] text-lg font-bold mb-1">
               {data.name}
@@ -55,7 +55,6 @@ const Card = ({ type, data }) => {
 
   const getItemId = () => {
     if (type === 'song') {
-      // Para canciones, usa trackId o id o albumId como fallback
       return data.trackId || data.id || data.albumId;
     }
     return data.id;
@@ -64,9 +63,9 @@ const Card = ({ type, data }) => {
   const itemId = getItemId();
 
   return (
-    <div className="bg-[var(--negro)] rounded-lg p-4 cursor-pointer w-[10%] min-w-[7rem] m-2.5 hover:opacity-80 relative">
+    <div className="bg-[var(--negro)] rounded-lg p-4 cursor-pointer m-2.5 hover:opacity-80 relative flex-shrink-0 w-full sm:w-[45%] md:w-[30%] lg:w-[20%] xl:w-[15%] 2xl:w-[12%] min-w-[7rem]">
       <Favourites 
-        item={{...data, id: itemId}} 
+        item={{ ...data, id: itemId }} 
         type={type === 'song' ? 'songs' : type === 'album' ? 'albums' : 'artists'} 
       />
       {renderContent()}

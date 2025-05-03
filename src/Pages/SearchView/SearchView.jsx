@@ -67,25 +67,27 @@ const SearchView = () => {
                         {artists.map((artist, index) => (
                             <div key={index} className="bg-black shadow rounded overflow-hidden">
                                 <Link to={'/artistDetail/' + artist.id}>
-                                <img
+                                    <img
                                     src={artist.images?.[0]?.url || "#"}
                                     alt={artist.name}
                                     className="w-full h-48 object-cover"
-                                />
+                                    />
+                                </Link>
+                                
                                 <div className="p-4">
                                     <h3 className="text-lg text-[var(--color4)] font-semibold">{artist.name}</h3>
                                     <p className="text-sm text-[var(--color4)]">Popularidad: {artist.popularity}</p>
-                                    {/*añadir a fav*/}
-                                </div>
-                                </Link>
+                                    
+                                    {/* Botón de favorito ahora dentro del padding */}
                                     <button
-                                        className={`text-xl ${isFavourite(artist.id, 'artists') ? 'text-red-500' : 'text-[var(--color4)]'}`}
-                                        onClick={() => handleFavourite(artist, 'artists')}
+                                    className={`text-xl ${isFavourite(artist.id, 'artists') ? 'text-red-500' : 'text-[var(--color4)]'}`}
+                                    onClick={() => handleFavourite(artist, 'artists')}
                                     >
-                                        {isFavourite(artist.id, 'artists') ? '♥' : '♡'}
+                                    {isFavourite(artist.id, 'artists') ? '♥' : '♡'}
                                     </button>
                                 </div>
-                            ))}
+                            </div>
+                        ))}
                     </div>
                 </>
             )}

@@ -18,21 +18,53 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed bg-[var(--negro)] text-[var(--color4)] w-full h-14 flex justify-between items-center px-4 z-[1000]">
+<header className="fixed bg-[var(--negro)] text-[var(--color4)] w-full px-4 py-2 z-[1000]">
+  {/* Pantallas chicas */}
+  <div className="flex flex-col sm:hidden w-full">
+    <div className="flex justify-between items-center mb-2">
+      {/*logo*/}
       <div
-        className="text-4xl font-extrabold p-0 text-[var(--color4)] hover:text-[var(--color3)] transition-colors cursor-pointer"
+        className="text-xl font-extrabold text-[var(--color4)] hover:text-[var(--color3)] transition-colors cursor-pointer"
         onClick={() => navigate("/")}
       >
         Playlistify
       </div>
-      <div className="absolute left-1/2 -translate-x-1/2 w-[30%]">
-        <Search />
+
+      {/*icono menu pantl chicas */}
+      <div onClick={toggleMenu} className="z-[1001]">
+        <i className="fa-solid fa-bars text-[1.5rem] text-[var(--color4)] hover:text-[var(--color3)] hover:scale-110 transition-transform cursor-pointer"></i>
       </div>
-      <div onClick={toggleMenu}>
-        <i className="text-[var(--color4)] text-[1.8rem] hover:text-[var(--color3)] hover:text-[2rem] fa-solid fa-bars"></i>
-      </div>
-      <DeployableMenu isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
-    </header>
+    </div>
+
+    {/*search debajo en pantallas chicas*/}
+    <div className="w-full">
+      <Search />
+    </div>
+  </div>
+
+  {/*pantallas grandes*/}
+  <div className="hidden sm:flex items-center w-full">
+    {/*Logo*/}
+    <div
+      className="text-2xl font-extrabold text-[var(--color4)] hover:text-[var(--color3)] transition-colors cursor-pointer"
+      onClick={() => navigate("/")}
+    >
+      Playlistify
+    </div>
+
+    {/*search*/}
+    <div className="flex-grow mx-4">
+      <Search />
+    </div>
+
+    {/*icono menu */}
+    <div onClick={toggleMenu} className="z-[1001]">
+      <i className="fa-solid fa-bars text-[1.8rem] text-[var(--color4)] hover:text-[var(--color3)] hover:scale-110 transition-transform cursor-pointer"></i>
+    </div>
+  </div>
+
+  <DeployableMenu isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
+</header>
   );
 }
 

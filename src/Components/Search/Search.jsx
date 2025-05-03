@@ -74,33 +74,32 @@ const Search = () => {
     }
 
     return (
-        <div className="search-container w-full flex justify-center items-center py-4">
-            <form
-                className="flex gap-2 w-full max-w-xl"
-                onSubmit={search}
-            >
-                <input
-                    type="text"
-                    className="flex-1 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    placeholder="Buscar artista, álbum o canción"
-                    value={searchInput}
-                    onChange={event => setSearchInput(event.target.value)}
-                />
-                <button
-                    type="submit"
-                    className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors"
-                >
-                    Buscar
-                </button>
-            </form>
+      <div className="search-container w-full flex justify-center items-center">
+        <form
+          className="flex gap-2 w-full"
+          onSubmit={search}
+        >
+          <input
+            type="text"
+            className="flex-1 px-2 py-1 sm:px-4 sm:py-2 text-sm sm:text-base border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            placeholder="Buscar artista, álbum o canción"
+            value={searchInput}
+            onChange={event => setSearchInput(event.target.value)}
+          />
+          <button
+            type="submit"
+            className="bg-blue-500 text-white px-2 py-1 sm:px-4 sm:py-2 rounded-md text-sm sm:text-base hover:bg-blue-600 transition-colors"
+          >
+            Buscar
+          </button>
+        </form>
 
-            {/*mensaje de "Cargando..." si esta en estado de carga */}
-            {loading && (
-                <div className="loading-message mt-4">
-                    <p className="text-lg text-blue-500">Cargando...</p>
-                </div>
-            )}
-        </div>
+        {loading && (
+          <div className="loading-message mt-4">
+            <p className="text-sm sm:text-lg text-blue-500">Cargando...</p>
+          </div>
+        )}
+      </div>
     );
 };
 

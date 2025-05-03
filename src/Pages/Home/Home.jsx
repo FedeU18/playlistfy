@@ -9,20 +9,20 @@ import Carousel from "../../Components/Carousel/Carousel";
 
 const artistIds = [
   "2n2RSaZqBuUUukhbLlpnE6",
-  "2ziB7fzrXBoh1HUPS6sVFn",
+  "5YCc6xS5Gpj3EkaYGdjyNK",
   "1Ffb6ejR6Fe5IamqA5oRUF",
   "7dGJo4pcD2V6oG8kP0tJRR",
   "37394IP6uhnjIpsawpMu4l",
-  "5YCc6xS5Gpj3EkaYGdjyNK",
+  "2ziB7fzrXBoh1HUPS6sVFn",
 ];
 
 const albumIds = [
-  "293aYSIVNjjmkAwupnlxRd",
+  "0fYhjxeRFdXp6s8R9hUXKt",
   "7FqHuAvmREiIwVXVpZ9ooP",
   "6IYPmM3xsOPL2XPSvf1ZAz",
   "0f7R0jf0pcTb6K6IVVPcMD",
   "4SD2UxRO9OgeSCQK0PN7cC",
-  "0fYhjxeRFdXp6s8R9hUXKt",
+  "293aYSIVNjjmkAwupnlxRd",
 ];
 
 const trackIds = [
@@ -30,10 +30,11 @@ const trackIds = [
   "1ulH5PIntNj0ro2K69W4Fx",
   "6lFUdRItQEsEuD7dSINL47",
   "0gchQwxmBWj5no8NJ8b2yH",
+  "7J00DHotXFrXatl9X6xY9r",
   "1TDk2Jmi4dVZhm2dum3Jim",
   "5UWwZ5lm5PKu6eKsHAGxOk",
-  "4dVbhS6OiYvFikshyaQaCN",
   "76Je5Wklky23mVoxiRszcN",
+  "4dVbhS6OiYvFikshyaQaCN",
 ];
 
 const Home = ({ accessToken }) => {

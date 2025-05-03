@@ -49,3 +49,4 @@
 - Crear NavBar para navegar entre páginas
 - Fetch a la canción elegida
 - botón para volver al listado
+-Búsqueda completa (muestra artista, canciones, albumes) (se puede buscar por esas 3 secciones) (se pueden ir a sus details y agregar como favs)
