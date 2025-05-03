@@ -1,7 +1,31 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
-const Carousel = ({ title, items, itemsPerPage = 5, renderItem }) => {
+const Carousel = ({ title, items, renderItem }) => {
   const [index, setIndex] = useState(0);
+  const [itemsPerPage, setItemsPerPage] = useState(5);
+
+  //cambia la cant de cards dependiendo del tamaño de la pantalla
+  useEffect(() => {
+    const updateItemsPerPage = () => {
+      const width = window.innerWidth;
+      if (width < 640) {
+        setItemsPerPage(1); //celulares
+      } else if (width < 768) {
+        setItemsPerPage(2); //sm tablets
+      } else if (width < 1024) {
+        setItemsPerPage(3); //md tablets
+      } else if (width < 1280) {
+        setItemsPerPage(4); //notebooksxd
+      } else {
+        setItemsPerPage(5); //pantalals grandes grandes
+      }
+    };
+
+    updateItemsPerPage(); //inicial
+    window.addEventListener("resize", updateItemsPerPage); //cuando cambia el tamaño
+
+    return () => window.removeEventListener("resize", updateItemsPerPage);
+  }, []);
 
   const next = () => {
     if (index + itemsPerPage < items.length) {

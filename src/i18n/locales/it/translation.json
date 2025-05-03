@@ -21,5 +21,6 @@
   "empty albums": "Nessun album contrassegnato come preferito",
   "empty songs": "Nessuna canzone contrassegnata come preferita",
   "search placeholder": "Cerca artista, album o canzone",
-  "loading": "Caricamento"
+  "loading": "Caricamento",
+  "back": "Indietro"
 }

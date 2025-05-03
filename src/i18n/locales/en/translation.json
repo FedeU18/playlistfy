@@ -21,5 +21,6 @@
   "empty albums": "No albums marked as favourite",
   "empty songs": "No songs marked as favourite",
   "search placeholder": "Search artist, album or song",
-  "loading": "loading"
+  "loading": "loading",
+  "back": "Back"
 }

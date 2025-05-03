@@ -10,7 +10,6 @@
 - Filtros de ordenamiento (a definir)
 - mensaje si no hay resultados
 - loader/spinner mientras cargan canciones
-- input de búsqueda
 
 ### Detalles de las canciones
 
@@ -27,13 +26,13 @@
 
 ### Extras
 
-- Hacer la página Responsive
 - Armar README
 - utilizar una librería para descargar un pdf con el detalle de una canción seleccionada
 - en vez de paginación, hacer un scroll infinito
 
 ## In Progress
 
+- Hacer la página Responsive (carrusel, footer, header, card, albumdetail,search, searchView hechos)
 - fetch a canciones y listarlas en cards
 - Diseñar página de detalle (mema)
 - Mostrar info completa de la canción (mema)
@@ -49,4 +48,5 @@
 - Crear NavBar para navegar entre páginas
 - Fetch a la canción elegida
 - botón para volver al listado
+- input de búsqueda
 -Búsqueda completa (muestra artista, canciones, albumes) (se puede buscar por esas 3 secciones) (se pueden ir a sus details y agregar como favs)
