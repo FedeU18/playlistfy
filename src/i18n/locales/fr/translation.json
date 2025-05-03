@@ -16,5 +16,9 @@
   "tracks": "Morceaux",
   "duration": "Durée",
   "albums": "Albums",
-  "artists": "Artistes"
+  "artists": "Artistes",
+  "empty artists": "Aucun artiste marqué comme favori",
+  "empty albums": "Aucun album marqué comme favori",
+  "empty songs": "Aucune chanson marquée comme favorite",
+  "search placeholder": "Künstler, Album oder Lied suchen"
 }

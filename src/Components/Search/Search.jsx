@@ -76,19 +76,19 @@ const Search = () => {
     return (
       <div className="search-container w-full flex justify-center items-center">
         <form
-          className="flex gap-2 w-full"
+          className="flex gap-2 w-lg"
           onSubmit={search}
         >
           <input
             type="text"
-            className="flex-1 px-2 py-1 sm:px-4 sm:py-2 text-sm sm:text-base border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="flex-1 px-2 py-1 sm:px-4 sm:py-2 text-sm sm:text-base border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--color4)]"
             placeholder="Buscar artista, álbum o canción"
             value={searchInput}
             onChange={event => setSearchInput(event.target.value)}
           />
           <button
             type="submit"
-            className="bg-blue-500 text-white px-2 py-1 sm:px-4 sm:py-2 rounded-md text-sm sm:text-base hover:bg-blue-600 transition-colors"
+            className="bg-[var(--color4)] text-black px-2 py-1 sm:px-4 sm:py-2 rounded-md text-sm sm:text-base hover:bg-blue-600 transition-colors"
           >
             Buscar
           </button>

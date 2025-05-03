@@ -16,6 +16,9 @@
   "tracks": "Faixas",
   "duration": "Duração",
   "albums": "Álbuns",
-  "artists": "Artistas"
-
+  "artists": "Artistas",
+  "empty artists": "Nenhum artista marcado como favorito",
+  "empty albums": "Nenhum álbum marcado como favorito",
+  "empty songs": "Nenhuma música marcada como favorita",
+  "search placeholder": "Buscar artista, álbum ou música"
 }
