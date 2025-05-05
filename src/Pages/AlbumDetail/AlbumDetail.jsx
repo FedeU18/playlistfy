@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate, useParams } from "react-router";
+import { Link } from "react-router";
 
 const AlbumDetail = ({ accessToken }) => {
   const { id } = useParams();
@@ -76,14 +77,12 @@ const AlbumDetail = ({ accessToken }) => {
                 key={track.id}
                 className="flex flex-col sm:flex-row justify-between items-start sm:items-center border-b border-gray-700 pb-2"
               >
-                <a
-                  href={track.external_urls.spotify}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  to={`/song/${track.id}`}
                   className="hover:underline hover:text-[var(--color2)]"
                 >
                   {index + 1}. {track.name}
-                </a>
+                </Link>
                 <span className="text-sm text-gray-400 sm:text-right">
                   {/*duraicon de cnacinoes */}
                   {Math.floor(track.duration_ms / 60000)}:

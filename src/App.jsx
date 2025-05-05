@@ -11,6 +11,7 @@ import ArtistDetail from "./Pages/ArtistDetail/ArtistDetail";
 import { FavouritesProvider } from "./context/FavouritesContext";
 import FavouritesList from "./Pages/FavouritesList/FavouritesList";
 import NotFound from "./Pages/NotFound/NotFound";
+import Song from "./Pages/Song/Song";
 
 const clientId = import.meta.env.VITE_CLIENT_ID;
 const clientSecret = import.meta.env.VITE_CLIENT_SECRET;
@@ -64,6 +65,10 @@ function App() {
               />
               <Route path="/favouritesList" element={<FavouritesList />} />
               <Route path="/searchView" element={<SearchView />} />
+              <Route
+                path="/song/:id"
+                element={<Song accessToken={accessToken} />}
+              />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>
