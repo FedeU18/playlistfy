@@ -22,5 +22,9 @@
   "empty songs": "No songs marked as favourite",
   "search placeholder": "Search artist, album or song",
   "loading": "loading",
-  "back": "Back"
+  "back": "Back",
+  "popularity": "Popularity",
+  "noResults": "No results found for this search",
+  "genres": "Genres",
+  "followers": "Followers"
 }

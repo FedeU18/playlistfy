@@ -22,5 +22,9 @@
   "empty songs": "Nessuna canzone contrassegnata come preferita",
   "search placeholder": "Cerca artista, album o canzone",
   "loading": "Caricamento",
-  "back": "Indietro"
+  "back": "Indietro",
+  "popularity": "Popolarità",
+  "noResults": "Nessun risultato trovato per questa ricerca",
+  "genres": "Generi",
+  "followers": "Follower"
 }
