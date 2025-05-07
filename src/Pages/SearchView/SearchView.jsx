@@ -76,7 +76,7 @@ const SearchView = () => {
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-8">
                         {songs.slice(0, 4).map((track, index) => (
                             <div key={index} className="relative bg-black shadow rounded overflow-hidden">
-                                <Link to={'/albumDetail/' + track.album.id}>
+                                <Link to={'/song/' + track.id}>
                                     <img
                                         src={track.album.images[0]?.url || "#"}
                                         alt={track.name}
