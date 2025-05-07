@@ -1,4 +1,3 @@
-import styles from "./LanguageSelector.module.css";
 import { useTranslation } from "react-i18next";
 
 const LanguageSelector = ({ isOpen, onClose }) => {
@@ -21,7 +20,7 @@ const LanguageSelector = ({ isOpen, onClose }) => {
         onClick={(e) => e.stopPropagation()}
       >
         <h2 className="text-[var(--color4)] text-2xl mb-6 text-center">
-          {t('select language')}
+          {t("select language")}
         </h2>
         <div className="flex flex-col gap-4">
           <button
