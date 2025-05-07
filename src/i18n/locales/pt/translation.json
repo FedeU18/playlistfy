@@ -22,5 +22,9 @@
   "empty songs": "Nenhuma música marcada como favorita",
   "search placeholder": "Buscar artista, álbum ou música",
   "loading": "Carregando",
-  "back": "Voltar"
+  "back": "Voltar",
+  "popularity": "Popularidade",
+  "noResults": "Nenhum resultado encontrado para esta pesquisa",
+  "genres": "Gêneros",
+  "followers": "Seguidores"
 }

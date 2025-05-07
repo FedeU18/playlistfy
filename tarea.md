@@ -13,13 +13,9 @@
 
 ### Detalles de las canciones
 
-- botón para agregar a favoritos
 
 ### Listado de canciones favoritas
 
-- listar canciones favoritas en cards
-- permitir eliminar canciones de favoritos
-- mensaje si no hay favoritos
 - persistencia en localStorage
 
 ### Navegación
@@ -32,9 +28,8 @@
 
 ## In Progress
 
-- Hacer la página Responsive (carrusel, footer, header, card, albumdetail,search, searchView hechos)
+- Hacer la página Responsive (carrusel (a revisar), footer, header, card, albumDetail,search, searchView, artistDetail hechos)
 - fetch a canciones y listarlas en cards
-- Diseñar página de detalle (mema)
 - Mostrar info completa de la canción (mema)
 
 ## Done
@@ -48,5 +43,12 @@
 - Crear NavBar para navegar entre páginas
 - Fetch a la canción elegida
 - botón para volver al listado
+- Diseñar página de detalle (mema)
 - input de búsqueda
 -Búsqueda completa (muestra artista, canciones, albumes) (se puede buscar por esas 3 secciones) (se pueden ir a sus details y agregar como favs)
+
+SE SUPONE Q YA ESTÁN
+- botón para agregar a favoritos
+- listar canciones favoritas en cards
+- permitir eliminar canciones de favoritos
+- mensaje si no hay favoritos

@@ -119,6 +119,7 @@ const Home = ({ accessToken }) => {
               key={track.id}
               type="song"
               data={{
+                id: track.id,
                 albumId: track.album.id,
                 name: track.name,
                 artist: track.artists[0]?.name || "Unknown Artist",

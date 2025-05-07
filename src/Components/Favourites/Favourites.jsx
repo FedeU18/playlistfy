@@ -1,5 +1,4 @@
 import React from 'react';
-import { FaRegStar, FaStar } from 'react-icons/fa';
 import { useFavourites } from '../../context/FavouritesContext';
 
 const Favourites = ({ item, type }) => {
@@ -16,17 +15,15 @@ const Favourites = ({ item, type }) => {
   };
 
   return (
-    <div 
-      className="absolute top-[10px] left-[10px] cursor-pointer text-[#ffd700] transition-transform duration-200 ease-in hover:scale-125 z-10"
+    <div
+      className={`absolute bottom-[10px] right-[10px] cursor-pointer text-2xl transition-transform duration-200 ease-in hover:scale-125 z-10 ${
+        isItemFavourite ? 'text-red-500' : 'text-[var(--color4)]'
+      }`}
       onClick={handleClick}
     >
-      {isItemFavourite ? (
-        <FaStar size={24} color="#ffd700" />
-      ) : (
-        <FaRegStar size={24} color="#808080" />
-      )}
+      {isItemFavourite ? '♥' : '♡'}
     </div>
   );
-};
+}  
 
 export default Favourites;

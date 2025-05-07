@@ -22,5 +22,9 @@
   "empty songs": "Keine Lieder als Favoriten markiert",
   "search placeholder": "Künstler, Album oder Lied suchen",
   "loading": "Laden",
-  "back": "Zurück"
+  "back": "Zurück",
+  "popularity": "Beliebtheit",
+  "noResults": "Für diese Suche wurden keine Ergebnisse gefunden",
+  "genres": "Genres",
+  "followers": "Follower"
 }

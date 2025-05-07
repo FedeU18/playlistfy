@@ -22,5 +22,9 @@
   "empty songs": "Aucune chanson marquée comme favorite",
   "search placeholder": "Künstler, Album oder Lied suchen",
   "loading": "Chargement",
-  "back": "Retour"
+  "back": "Retour",
+  "popularity": "Popularité",
+  "noResults": "Aucun résultat trouvé pour cette recherche",
+  "genres": "Genres",
+  "followers": "Abonnés"
 }
